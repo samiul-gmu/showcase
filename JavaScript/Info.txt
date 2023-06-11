@@ -1,0 +1,1 @@
+This folder contains some basic javascript codes and projects to showcase my familiarity with the language.
