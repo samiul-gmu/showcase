@@ -1,3 +1,4 @@
+/*
 // JavaScript Fundamentals – Part 1
 
 // LECTURE: Values and Variables
@@ -59,3 +60,4 @@ console.log("Does the " + country + " have more population than the average popu
 // 5
 let description = country + " is in " + continent + ", and its " + Math.floor(population / 1000000) + " million people speak " + language;
 console.log("Description:", description);
+*/
