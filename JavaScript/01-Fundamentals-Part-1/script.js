@@ -193,6 +193,32 @@ console.log('23' / '10' * 3);
 let n = '1' + 1;
 n = n - 1;
 console.log(n);
-*/
 
-// 
+// 21 - Truthy and Falsy Values
+// 5 falsy values: 0, '', undefined, null, NaN
+// everything else is truthy values
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+console.log(Boolean(1));
+console.log(Boolean('Samiul'));
+console.log(Boolean(' ')); // String with even a space in it will become true
+console.log(Boolean({})); // Empty object will become true
+
+const money = 0;
+if (money) {
+    console.log(`Don't spend all!`);
+} else {
+    console.log(`You should get a job!`);
+}
+
+let height = 0; // Since 0 is a falsy value, we cannot actually check like this if we want to see if the height is undefined.
+if (height) {
+    console.log(`YAY! Height is defined!`);
+} else {
+    console.log(`Height is UNDEFINED!`);
+}
+*/
