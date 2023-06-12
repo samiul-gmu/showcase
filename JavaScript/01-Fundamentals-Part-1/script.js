@@ -144,7 +144,6 @@ console.log(`With template literals
 multiline strings
 have become extremely
 easy to print!`);
-*/
 
 // 18 - Taking Decisions if else Statements
 const age = 15;
@@ -164,3 +163,36 @@ if (birthYear <= 2000) {
 }
 
 console.log(`${century}`);
+
+// 20 - Type Conversion and Coercion
+// Type conversion is when we explicitely convert type of a variable
+const inputYear = '1991'; // setting it as string
+console.log(inputYear + 18); // trying to add 18 with the year but it will just concatenate it
+
+// We need to convert it to number before adding 18
+console.log(Number(inputYear) + 18); // Now, it is working as intended
+// Thing to note: We are just converting or casting it during printing. The actual variable is still in string
+
+console.log(Number(inputYear), inputYear) // Here, we are printing both the number and string version
+
+console.log(Number('Sample Text')); // This will print NaN as a text cannot be converted to number
+
+console.log(String(23), 23) // Here we convert 23 to its string version
+
+// Type coercion is when an operator is dealing with variables of two different types. JS convert of them automatically
+console.log("I'm " + 23 + " years old"); // Here, type coercion is taking place. 23 is getting converted to String
+
+console.log('23' - '10' - 3); // Here, minus sign is triggering type coercion where all the strings are getting converted to numbers.
+
+console.log('23' + '10' + 3); // Here, plus sign does not do similar job as minus sign did above; rather, it concatenate them all assuming they all should be string
+
+console.log('23' * '10' * 3);
+
+console.log('23' / '10' * 3);
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+*/
+
+// 
