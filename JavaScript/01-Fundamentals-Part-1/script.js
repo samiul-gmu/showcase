@@ -222,3 +222,30 @@ if (height) {
     console.log(`Height is UNDEFINED!`);
 }
 */
+
+// 22 - Equality Operators vs
+const age = '18';
+if (age === 18) console.log(`You just became an adult :D (strict)`); // Tripple equals (Strict do not do type coercion. Double equals (loose) will automatically do that.
+
+if (age == 18) console.log(`You just became an adult :D (loose)`);
+
+// We should mostly stick to the Strict equality check; its safer!
+
+const favourite = Number(prompt(`What's your favourite number?`));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // '23' will NOT be classified as equal to 23
+    console.log(`Cool! 23 is an amazing number!`);
+} else if (favourite === 7) {
+    console.log(`7 is also a cool number!`);
+} else if (favourite === 9) {
+    console.log(`9 is a cool number too!`);
+}
+else {
+    console.log(`Number is NOT 23 or 7 or 9!`);
+}
+
+if (favourite !== 23) {
+    console.log(`Why not the 23?!`);
+}
