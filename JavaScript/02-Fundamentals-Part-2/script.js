@@ -199,7 +199,6 @@ console.log(friends.indexOf(23)); // indexOf does not do type cooersion
 
 console.log(friends.includes('23')); // includes does not do type cooersion
 console.log(friends.includes(23)); // includes does not do type cooersion
-*/
 
 // 42 - Introduction to Objects
 const jonasArray = ['Jonas', 'Anderson', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']];
@@ -214,6 +213,38 @@ const jonas = {
 };
 
 console.log(jonas);
+*/
 
+// 43 - Dot vs Bracket Notation
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Anderson',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
 
+console.log(jonas);
+// dot(.) operator to call an property of an object
+console.log(jonas.lastName);
+console.log(jonas.friends);
 
+// brackets notation: here we are entering property name as a string.
+// here we can actually put any expression
+console.log(jonas['firstName']);
+
+const nameKey = 'Name';
+console.log(`First name: ${jonas['first' + nameKey]}`);
+console.log(`Last name: ${jonas['last' + nameKey]}`);
+
+const interestedIn = prompt(`What do you want to know about Jonash? Choose between firstName, lastName, age, job, and friends`);
+
+// jonas[interestedIn] gives us 'undefined' which is a falsy value
+if (jonas[interestedIn]) console.log(`${jonas[interestedIn]}`);
+else console.log(`We do not have that information!`);
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@iamjonas';
+console.log(jonas);
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
