@@ -221,7 +221,6 @@ if (height) {
 } else {
     console.log(`Height is UNDEFINED!`);
 }
-*/
 
 // 22 - Equality Operators vs
 const age = '18';
@@ -249,3 +248,96 @@ else {
 if (favourite !== 23) {
     console.log(`Why not the 23?!`);
 }
+
+// 23 - Boolean Logic
+// Theory of boolean logic
+
+// 24 - Logical Operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(`Does Sarah has both driver's license and good vision?: ${hasDriversLicense && hasGoodVision}`);
+console.log(`Does Sarah has both driver's license or good vision?: ${hasDriversLicense || hasGoodVision}`);
+console.log(`Sarah does not have good vision: ${!hasGoodVision}`);
+
+let shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive) {
+    console.log(`Sarah is able to drive!`);
+} else {
+    console.log('Someone else should drive!')
+}
+
+const isTired = true;
+
+console.log(`Any of the attributes true?: ${hasDriversLicense || hasGoodVision || isTired}`);
+
+console.log(`All of the attributes true?: ${hasDriversLicense && hasGoodVision && isTired}`);
+
+shouldDrive = shouldDrive && !isTired;
+
+if (shouldDrive) {
+    console.log(`Sarah is able to drive!`);
+} else {
+    console.log('Someone else should drive!')
+}
+
+// 26 - The switch Statement
+const day = 'monday';
+
+switch (day) {
+    case 'monday':
+        console.log(`Plan course structure.`);
+        console.log(`Go to coding meetup.`);
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Both Wednesday and Thursday are skill development day');
+        break;
+    case 'friday':
+        console.log(`Jummah!`);
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Weekends are awesome!');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+    console.log(`Plan course structure.`);
+    console.log(`Go to coding meetup.`);
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Both Wednesday and Thursday are skill development day');
+} else if (day === 'friday') {
+    console.log(`Jummah!`);
+} else if (day === 'sunday' || day === 'saturday') {
+    console.log('Weekends are awesome!');
+} else {
+    console.log('Not a valid day!');
+}
+
+// 27 - Statements and Expressions
+// if else is a statement whereas 5+6 or a string such as 'Hi.' is an expression
+
+// 28 - The Conditional Ternary Operator
+// Ternary operators are expression
+const age = 23;
+age >= 18 ? console.log(`I like to drink tea`) : console.log('I like to drink water');
+
+const drink = age >= 18 ? 'tea' : 'water';
+console.log(`I would like to drink ${drink}`);
+
+let drink2;
+if (age >= 18) drink2 = 'tea'
+else drink2 = 'water'
+console.log(`I would like to drink ${drink2}`);
+
+console.log(`I will have ${age >= 18 ? 'tea' : 'water'} to drink`)
+*/
