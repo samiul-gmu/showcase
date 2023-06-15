@@ -123,3 +123,45 @@ console.log(yearsUntilRetirement(1970, 'Jamil'));
 
 // 39 - Introduction to Arrays
 const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Michael', 'Steven', 'Peter'];
+
+console.log(friends);
+
+const years = new Array(1991, 198, 2008, 2020);
+
+console.log(years);
+
+console.log(`First name from the friends array: ${friends[0]}`);
+console.log(`Third name from the friends array: ${friends[2]}`);
+console.log(`Number of friends: ${friends.length}`);
+
+console.log(`Last element from the years array: ${years[years.length - 1]}`);
+
+// replacing element
+friends[2] = 'Jay';
+console.log(friends);
+// Even though array 'friends' was delared with 'const', we just changed it's content
+// We still cannot change the address that we are storing in that 'friends' varaible but can change
+
+// We can have array that can have values of different types
+const jonas = ['Jonas', 'Anderson', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+
+// Age calculator
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const years2 = [1990, 1967, 2002, 2010, 2018];
+
+// Here we are trying to subtract an array of numbers in that calcAge function instead of a number that we should have passed; hence, we are getting NaN.
+console.log(calcAge(years2));
+
+const age1 = calcAge(years2[0]);
+console.log(age1);
+
+const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
+console.log(ages);
