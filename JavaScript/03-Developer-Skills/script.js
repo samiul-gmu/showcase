@@ -12,7 +12,6 @@ console.log(calcAge(1995));
 
 // 57 - Learning How to Code
 // Think of a big project where you can showcase all of your skills
-*/
 
 // 58 - How to Think Like a Developer Become a Problem Solver
 // 1. Understand the problem (ask the right questions to understand it fully)
@@ -62,3 +61,7 @@ const calcTempAmplitude2 = function (temps1, temps2) {
 
 const temperatures2 = [10, 20, 30, 40, 50];
 console.log(calcTempAmplitude2(temperatures, temperatures2));
+*/
+
+// 60 - Debugging Fixing Errors
+//Identify>Find>Fix>Prevent
