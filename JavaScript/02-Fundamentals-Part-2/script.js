@@ -119,7 +119,6 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1992, 'Samiul'));
 console.log(yearsUntilRetirement(1970, 'Jamil'));
-*/
 
 // 39 - Introduction to Arrays
 const friend1 = 'Michael';
@@ -165,3 +164,43 @@ console.log(age1);
 
 const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
 console.log(ages);
+*/
+
+
+// 40 - Basic Array Operations Methods
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add elements
+let newLength = friends.push('Jay'); // insert at the end
+console.log(friends);
+console.log(newLength);
+
+newLength = friends.unshift('John'); // insert at the front
+console.log(friends);
+console.log(newLength);
+
+// Remove elements
+friends.pop();
+let removedElem = friends.pop() // remmoves the last element
+console.log(friends);
+console.log(removedElem);
+
+console.log(`Removing from the front!`)
+console.log(friends.shift());
+console.log(friends);
+
+console.log(friends.indexOf('Sam'));
+console.log(friends.indexOf('Steven'));
+
+console.log(friends.includes('Steven')); // Works similar to indexOf but does not return the index. Insted returns a boolean based on the provided attribute exists in the array or not.
+
+friends.push(23); // Inserting a number to see if includes does type cooersion.
+
+console.log(friends.indexOf('23')); // indexOf does not do type cooersion
+console.log(friends.indexOf(23)); // indexOf does not do type cooersion
+
+console.log(friends.includes('23')); // includes does not do type cooersion
+console.log(friends.includes(23)); // includes does not do type cooersion
+
+
+
