@@ -270,9 +270,52 @@ const jonas = {
 
 console.log(`Age of ${jonas.firstName} ${jonas.lastName}: ${jonas.calcAge()} year(s).`);
 console.log(jonas.getSummary());
-*/
 
 // 46 - Iteration The for Loop
 for (let counter = 1; counter <= 10; counter++) {
     console.log(`Counter ${counter}`);
+}
+*/
+
+// 47 - Looping Arrays Breaking and Continuing
+const jonasArray = [
+    'Jonas',
+    'Anderson',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    //types[i] = typeof jonasArray[i];
+    types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+    ages[i] = 2037 - years[i];
+}
+
+for (let i = 0; i < ages.length; i++) {
+    console.log(`Birth Year: ${years[i]} and Age: ${ages[i]}`);
+}
+
+// continue and break
+console.log(`--- ONLY STRINGS ---`)
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log(`--- BREAK WITH NUMBER ---`)
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
 }
