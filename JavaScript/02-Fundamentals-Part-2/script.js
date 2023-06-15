@@ -275,7 +275,6 @@ console.log(jonas.getSummary());
 for (let counter = 1; counter <= 10; counter++) {
     console.log(`Counter ${counter}`);
 }
-*/
 
 // 47 - Looping Arrays Breaking and Continuing
 const jonasArray = [
@@ -318,4 +317,25 @@ console.log(`--- BREAK WITH NUMBER ---`)
 for (let i = 0; i < jonasArray.length; i++) {
     if (typeof jonasArray[i] === 'number') break;
     console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+// 48 - Looping Backwards and Loops in Loops
+const jonasArray = [
+    'Jonas',
+    'Anderson',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(jonasArray[i]);
+}
+
+for (let exercise = 1; exercise <= 4; exercise++) {
+    console.log(`------- Starting Excercise ${exercise}`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️`);
+    }
 }
