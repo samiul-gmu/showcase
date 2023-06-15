@@ -247,7 +247,6 @@ jonas['twitter'] = '@iamjonas';
 console.log(jonas);
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
-*/
 
 // 44 - Object Methods
 const jonas = {
@@ -271,3 +270,9 @@ const jonas = {
 
 console.log(`Age of ${jonas.firstName} ${jonas.lastName}: ${jonas.calcAge()} year(s).`);
 console.log(jonas.getSummary());
+*/
+
+// 46 - Iteration The for Loop
+for (let counter = 1; counter <= 10; counter++) {
+    console.log(`Counter ${counter}`);
+}
