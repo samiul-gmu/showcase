@@ -318,7 +318,6 @@ for (let i = 0; i < jonasArray.length; i++) {
     if (typeof jonasArray[i] === 'number') break;
     console.log(jonasArray[i], typeof jonasArray[i]);
 }
-*/
 
 // 48 - Looping Backwards and Loops in Loops
 const jonasArray = [
@@ -339,3 +338,26 @@ for (let exercise = 1; exercise <= 4; exercise++) {
         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️`);
     }
 }
+
+// 49 - The while Loop
+console.log(`--- FOR LOOP ---`)
+for (let rep = 1; rep <= 10; rep++) {
+    //console.log(`Lifting weight repetition ${rep} 🏋️`);
+}
+
+console.log(`--- WHILE LOOP ---`)
+let rep = 1;
+while (rep <= 10) {
+    //console.log(`Lifting weight repetition ${rep} 🏋️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end...');
+}
+*/
