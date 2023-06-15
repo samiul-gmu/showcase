@@ -164,8 +164,6 @@ console.log(age1);
 
 const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
 console.log(ages);
-*/
-
 
 // 40 - Basic Array Operations Methods
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -201,6 +199,21 @@ console.log(friends.indexOf(23)); // indexOf does not do type cooersion
 
 console.log(friends.includes('23')); // includes does not do type cooersion
 console.log(friends.includes(23)); // includes does not do type cooersion
+*/
+
+// 42 - Introduction to Objects
+const jonasArray = ['Jonas', 'Anderson', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']];
+console.log(jonasArray);
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Anderson',
+    birthYear: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(jonas);
 
 
 
