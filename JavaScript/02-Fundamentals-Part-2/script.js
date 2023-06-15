@@ -213,7 +213,6 @@ const jonas = {
 };
 
 console.log(jonas);
-*/
 
 // 43 - Dot vs Bracket Notation
 const jonas = {
@@ -248,3 +247,27 @@ jonas['twitter'] = '@iamjonas';
 console.log(jonas);
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+*/
+
+// 44 - Object Methods
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Anderson',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        //console.log(this);
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this['firstName']} ${this.lastName} is a ${this.calcAge()}-year old ${this.job}, and he ${this.hasDriversLicense ? 'has' : 'does not have'} a driver's license.`;
+    }
+};
+
+console.log(`Age of ${jonas.firstName} ${jonas.lastName}: ${jonas.calcAge()} year(s).`);
+console.log(jonas.getSummary());
