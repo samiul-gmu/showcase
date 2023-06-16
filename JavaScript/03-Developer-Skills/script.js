@@ -61,7 +61,58 @@ const calcTempAmplitude2 = function (temps1, temps2) {
 
 const temperatures2 = [10, 20, 30, 40, 50];
 console.log(calcTempAmplitude2(temperatures, temperatures2));
-*/
 
 // 60 - Debugging Fixing Errors
 //Identify>Find>Fix>Prevent
+*/
+
+// 61 - Debugging with the Console and Breakpoints
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    //value: Number(prompt(`Degrees Celsius:`)),
+    value: 10,
+  };
+
+  console.table(measurement);
+  //console.log(measurement);
+  //console.warn(measurement);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+
+console.log(measureKelvin());
+
+const temperatures = [-3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+const calcTempAmplitude = function (temps) {
+  let max;
+  let min;
+  let defined = false;
+  for (let i = 0; i < temps.length; i++) {
+    if (defined === true) {
+      if (max < temps[i]) max = temps[i];
+      if (min > temps[i]) min = temps[i];
+    } else {
+      if (typeof temps[i] === 'number') {
+        max = min = temps[i];
+        defined = true;
+      }
+    }
+  }
+  if (defined) return max - min;
+  else return 'undefined';
+};
+
+//console.log(calcTempAmplitude(temperatures));
+
+// now update the method so that it can take two arrays and concat them before finding the temp amplitude
+const calcTempAmplitudeBug = function (temps1, temps2) {
+  const mergedArray = temps1.concat(temps2);
+  return calcTempAmplitude(mergedArray);
+};
+
+const temperatures2 = [10, 20, 30, 40, 50];
+console.log(calcTempAmplitudeBug(temperatures, temperatures2));
