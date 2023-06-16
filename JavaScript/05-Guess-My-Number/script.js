@@ -38,6 +38,8 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score; //document.querySelector('.score').textContent
       document.querySelector('.highscore').textContent = highscore;
     }
+    document.querySelector('body').style.backgroundColor = '#15ad48';
+    document.querySelector('.number').style.width = '30rem';
   } else if (score === 0) {
     document.querySelector('.message').textContent = '💥 GAME OVER!';
   } else if (guess > result) {
@@ -64,4 +66,6 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.message').textContent = 'Start guessing...';
   result = Math.floor(Math.random() * 20) + 1;
   score = 20;
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
