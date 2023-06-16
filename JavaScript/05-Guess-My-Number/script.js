@@ -16,9 +16,10 @@ console.log(document.querySelector('.guess').value);
 */
 
 // 73 - Handling Click Events
-const result = Math.floor(Math.random() * 20) + 1;
+let result = Math.floor(Math.random() * 20) + 1;
+let score = 20;
 let highscore = 0;
-console.log(result);
+//console.log(result);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guessString = document.querySelector('.guess').value;
@@ -32,20 +33,27 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === result) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.number').textContent =
-      document.querySelector('.score').textContent;
+      document.querySelector('.guess').value;
     if (Number(document.querySelector('.score').textContent) > highscore) {
-      highscore = document.querySelector('.score').textContent;
+      highscore = score; //document.querySelector('.score').textContent
       document.querySelector('.highscore').textContent = highscore;
     }
-    Number(document.querySelector('.score').textContent) - 1;
+  } else if (score === 0) {
+    document.querySelector('.message').textContent = '💥 GAME OVER!';
   } else if (guess > result) {
-    document.querySelector('.message').textContent = 'Too High!';
-    document.querySelector('.score').textContent =
-      Number(document.querySelector('.score').textContent) - 1;
-  } else {
-    document.querySelector('.message').textContent = 'Too Low!';
-    document.querySelector('.score').textContent =
-      Number(document.querySelector('.score').textContent) - 1;
+    document.querySelector('.message').textContent = '📈 Too High!';
+    score--;
+    document.querySelector('.score').textContent = score; //Number(document.querySelector('.score').textContent) - 1
+    if (score === 0) {
+      document.querySelector('.message').textContent = '💥 GAME OVER!';
+    }
+  } else if (guess < result) {
+    document.querySelector('.message').textContent = '📉 Too Low!';
+    score--;
+    document.querySelector('.score').textContent = score; //Number(document.querySelector('.score').textContent) - 1
+    if (score === 0) {
+      document.querySelector('.message').textContent = '💥 GAME OVER!';
+    }
   }
 });
 
@@ -54,4 +62,6 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
   document.querySelector('.score').textContent = 20;
   document.querySelector('.message').textContent = 'Start guessing...';
+  result = Math.floor(Math.random() * 20) + 1;
+  score = 20;
 });
