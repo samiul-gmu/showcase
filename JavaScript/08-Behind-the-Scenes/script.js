@@ -113,7 +113,6 @@ matilda.calcAge();
 const f = jonas.calcAge;
 
 //f(); // this will produce an error as the this keyword here is undefined as we are not calling the function on an object
-*/
 
 // 98 - Regular Functions vs Arrow Functions
 
@@ -162,3 +161,22 @@ const addArrow = (a, b) => {
 };
 
 console.log(addArrow(2, 3, 5, 4));
+*/
+
+// 99 - Primitives vs Objects Primitive vs Reference Types
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Jonas',
+  age: 30,
+};
+
+const friend = me; // Here, we are not doing a deep copy; it is just copying references
+friend.age = 27;
+
+console.log(friend.age);
+console.log(me.age);
