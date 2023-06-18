@@ -161,7 +161,6 @@ const addArrow = (a, b) => {
 };
 
 console.log(addArrow(2, 3, 5, 4));
-*/
 
 // 99 - Primitives vs Objects Primitive vs Reference Types
 let age = 30;
@@ -180,3 +179,45 @@ friend.age = 27;
 
 console.log(friend.age);
 console.log(me.age);
+
+// 100 - Primitives vs Objects in Practice
+// Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+
+console.log(lastName, oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+};
+
+const marriedJessica = jessica; // Both of them will point to the same object; we are just copying reference
+marriedJessica.lastName = 'Davis';
+
+console.log('Before Marriage:', jessica);
+console.log('After Marriage:', marriedJessica);
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+const copyOfJessica2 = Object.assign({}, jessica2);
+
+copyOfJessica2.lastName = 'Davis';
+
+console.log('Before Marriage:', jessica2);
+console.log('After Marriage:', copyOfJessica2);
+
+copyOfJessica2.family.push('Mary');
+copyOfJessica2.family.push('John');
+
+console.log('Before Marriage:', jessica2);
+console.log('After Marriage:', copyOfJessica2);
+*/
