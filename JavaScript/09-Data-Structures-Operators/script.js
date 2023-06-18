@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 // 103 - Destructuring Arrays
 // Data needed for a later exercise
 const flights =
@@ -31,8 +31,20 @@ const restaurant = {
   order: function (startIndex, mainIndex) {
     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}.`
+    );
+  },
 };
 
+/*
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
@@ -73,3 +85,51 @@ const [p = 1, q = -1, r = -1] = [8, 9]; // Setting default values; if the corres
 
 console.log(p, q, r);
 */
+
+// 104 - Destructuring Objects
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+// We can set new names as well
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// We can also set default values
+const {
+  menu = [],
+  starterMenu: starters = [],
+  mainMenu: main = [],
+} = restaurant;
+console.log(`Menu: ${menu}\nStarters: ${starters}\nMains: ${main}`);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
+// [b, a] = [a, b];
+// console.log(a, b);
+
+// Nested object destructuring
+const {
+  fri: { open: o, close: c, lunchBreak: lb = null },
+} = openingHours;
+console.log(o, c, lb);
+
+//
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Home',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  mainIndex: 1,
+  address: 'Office',
+});
