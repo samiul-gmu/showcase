@@ -189,7 +189,6 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurant);
 console.log(restaurantCopy);
-*/
 
 // 106 - Rest Pattern and Parameters
 
@@ -225,3 +224,32 @@ console.log(add(...numberArray));
 
 restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinash', 'cheese');
 restaurant.orderPizza('cheese');
+*/
+
+// 107 - Short Circuiting and
+
+console.log('---- OR ----');
+// OR can use ANY data type, return ANY data type, short-circuiting
+// If the first value is a truthy value, it will immediately return that value regardless of what the other vlaue is. It will not look at the rest of the values (short circuiting).
+console.log(3 || 'Sami');
+console.log('' || 'Sami');
+console.log(true || 'Sami');
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+//restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('---- AND ----');
+console.log(0 && 'Sami');
+console.log(7 && 'Sami');
+console.log('Sami' && 'Tithi');
+console.log('Hello' && 23 && null && 'Sami');
+
+if (restaurant.orderPizza) restaurant.orderPizza('Mushroom', 'Spinach');
+
+restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Spinach');
