@@ -42,6 +42,13 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}.`
     );
   },
+
+  // Real-world example: Using spread to send values of an array separately
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}!`
+    );
+  },
 };
 
 /*
@@ -84,7 +91,6 @@ console.log(i, j, k);
 const [p = 1, q = -1, r = -1] = [8, 9]; // Setting default values; if the corresponding value is unavailable during destructuring, the default value will be used instead.
 
 console.log(p, q, r);
-*/
 
 // 104 - Destructuring Objects
 const { name, openingHours, categories } = restaurant;
@@ -121,7 +127,7 @@ const {
 } = openingHours;
 console.log(o, c, lb);
 
-//
+// Detructuring of the object at the functions argument location
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Home',
@@ -133,3 +139,49 @@ restaurant.orderDelivery({
   mainIndex: 1,
   address: 'Office',
 });
+*/
+
+// 105 - The Spread Operator
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr]; // Using spread element, we are taking all the elements of arr, and putting them as if they are side by side separated by commas
+console.log(newArr);
+
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+// Join two arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. NOT objects
+const str = 'Samiul';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+
+//
+const ingredients = [
+  prompt(`Let's make pasta! Ingredients 1?`),
+  prompt(`Let's make pasta! Ingredients 2?`),
+  prompt(`Let's make pasta! Ingredients 3?`),
+];
+
+restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { foundIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant);
+console.log(restaurantCopy);
