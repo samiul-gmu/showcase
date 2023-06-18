@@ -224,7 +224,6 @@ console.log(add(...numberArray));
 
 restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinash', 'cheese');
 restaurant.orderPizza('cheese');
-*/
 
 // 107 - Short Circuiting and
 
@@ -253,3 +252,13 @@ console.log('Hello' && 23 && null && 'Sami');
 if (restaurant.orderPizza) restaurant.orderPizza('Mushroom', 'Spinach');
 
 restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Spinach');
+*/
+
+// 108 - The Nullish Coalescing Operator
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish: null and undefined (NOT 0 or '')
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
