@@ -114,3 +114,51 @@ const f = jonas.calcAge;
 
 //f(); // this will produce an error as the this keyword here is undefined as we are not calling the function on an object
 */
+
+// 98 - Regular Functions vs Arrow Functions
+
+// var firstName = 'Matilda'; // This is a very risky business going on here. We are using var to define firstName. Unlike let and const, var will create this and include it in the window function. So, later when we call greet (an arrow function) on Jonas, and use this inside it, as per the property of an arrow function, this keyword will not point to jonas but to the global. Meaning, this.firstName will print Matilda
+
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    // solution 1
+    // const self = this;
+    // console.log(this);
+    // console.log(2023 - this.year);
+
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // solution 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillenial();
+  },
+  greet: () => console.log(`Hey ${this.firstName}`),
+};
+
+jonas.greet(); // this keyword will not point here to jonas's firstName. Arrow function does not have its own this keyword. It will get from its global scope which points to window object. Even though firstName does not exist in the window object and instead of showing this with an error, JS shows that returning undefined.
+
+jonas.calcAge();
+
+// Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+console.log(addExpr(2, 3, 5, 3, 8)); // in javascript, even though a function takes in a fixed number of arguments, we can send more.
+
+const addArrow = (a, b) => {
+  //console.log(arguments); // arrow function does not have argument keyword
+  return a + b;
+};
+
+console.log(addArrow(2, 3, 5, 4));
