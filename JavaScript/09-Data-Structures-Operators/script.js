@@ -330,9 +330,38 @@ for (const [i, elem] of menu.entries()) {
 }
 
 console.log(...menu.entries());
-*/
 
 // 112 - Enhanced Object Literals
 // Changed delaration of openingHours
 // changed definition of order function
 // added weekdays array and using it to name a variable inside the openingHours array
+
+// 113 - Optional Chaining
+// Trying to see the monday's opening hours
+if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+
+// What if the openingHours does not exit or the restaurant?
+// WITH optional chaining
+console.log(restaurant?.openingHours?.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days)
+  console.log(
+    `On ${day} we open at`,
+    restaurant?.openingHours?.[day]?.open ?? '--X--'
+  );
+
+// On functions
+console.log(restaurant?.order?.(0, 1) ?? 'Method does not exist!');
+console.log(restaurant?.orderRisotto?.(0, 1) ?? 'Method does not exist!');
+
+// On arrays
+const users = [
+  { userName: 'Sami', eyeColor: 'black' },
+  { userName: 'Tithi', eyeColor: 'brown' },
+];
+console.log(users[0]?.userName ?? 'Invalid Index!');
+*/
+
+// 114 - Looping Objects Object Keys Values and Entries
