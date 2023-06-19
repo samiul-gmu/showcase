@@ -365,3 +365,19 @@ console.log(users[0]?.userName ?? 'Invalid Index!');
 */
 
 // 114 - Looping Objects Object Keys Values and Entries
+const properties = Object.keys(openingHours);
+console.log(properties);
+console.log(`We are open ${properties.length} day(s) a week!`);
+let openStr = `We are open ${properties.length} day(s) a week:`;
+//for (const day of Object.keys(openingHours)) console.log(day);
+for (const day of Object.keys(openingHours)) openStr += ' ' + day + ',';
+console.log(openStr);
+
+//property values
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entries
+const entries = Object.entries(openingHours);
+for (const [day, { open, close }] of entries)
+  console.log(`On ${day} we open at ${open} and close at ${close}!`);
