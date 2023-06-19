@@ -5,6 +5,25 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
+// Weekdays
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const openingHours = {
+  //thu: {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
@@ -13,22 +32,30 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  // openingHours: {
+  //   thu: {
+  //     open: 12,
+  //     close: 22,
+  //   },
+  //   fri: {
+  //     open: 11,
+  //     close: 23,
+  //   },
+  //   sat: {
+  //     open: 0, // Open 24 hours
+  //     close: 24,
+  //   },
+  // },
 
-  order: function (startIndex, mainIndex) {
+  // ES6 enhanced object literals
+  openingHours, // In older version, we had to do this openingHours = openingHours,
+
+  // order: function (startIndex, mainIndex) {
+  //   return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+  // },
+
+  // ES6 enhanced function
+  order(startIndex, mainIndex) {
     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
   },
 
@@ -288,7 +315,6 @@ rest2.owner &&= '<Anonymous>';
 
 console.log(rest1);
 console.log(rest2);
-*/
 
 // 111 - Looping Arrays The forof Loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -304,3 +330,9 @@ for (const [i, elem] of menu.entries()) {
 }
 
 console.log(...menu.entries());
+*/
+
+// 112 - Enhanced Object Literals
+// Changed delaration of openingHours
+// changed definition of order function
+// added weekdays array and using it to name a variable inside the openingHours array
