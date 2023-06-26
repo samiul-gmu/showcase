@@ -12,12 +12,19 @@
       .container {
         color: white;
         border: 5px solid gold;
-        display: inline-flex;
-        flex-direction: column;
+        padding: 5px;
+        display: flex; /* inline-flex */
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
       }
 
       .container > div {
+        padding: 5px;
         flex-basis: 100px;
+        text-align: center;
       }
 
       /*
@@ -30,6 +37,7 @@ children of the .container class.
       }
       .orange {
         background-color: #f0932b;
+        align-self: flex-start;
       }
       .yellow {
         background-color: #f6e58d;
