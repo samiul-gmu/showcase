@@ -1,145 +1,560 @@
-<!--Author: Samiul-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samiul'sResume</title>
-
-    <!-- <style>
-      h2{
-        background-color: silver;
-        font-style: italic;
-        font-size:170%;
-      }
-    </style> -->
-
+    <title>Samiul Islam</title>
     <link
-    rel="stylesheet"
-    href="./styles.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
     />
 
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Samiul Islam</h1>
-    <img src="./assets/images/samiul.jpg" width="600" />
+    <!-- Navbar -->
+    <!-- <section id="navbar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="logo" src="./assets/images/logo.jpg" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section> -->
 
-    <h2>Summary</h2>
-    <p>
-      With over nine (9) years of experience as an instructor, trainer, and Java
-      developer, I possess extensive expertise in backend application
-      development using Java, J2EE, Spring, Spring Boot, and Hibernate
-      frameworks, incorporating Aspect and Spring AOP concepts. I also possess a
-      strong grasp of database management, including SQL, PostgreSQL, MongoDB,
-      and more. Throughout my career, I have successfully trained individuals
-      working on a wide range of projects, from large-scale enterprise-level
-      applications to smaller applications suitable for startups or student
-      projects. I am well-versed in the MVC framework and proficient in build
-      tools like Maven and Gradle. When it comes to problem-solving, I
-      prioritize clean, robust, secure, and optimized code. I maintain a strong
-      passion and dedication for my work, continually updating my skills and
-      knowledge to stay abreast of the latest technologies and tools in the Java
-      ecosystem, ensuring that I am equipped to meet modern requirements.
-    </p>
-    <hr />
+    <!-- Intro Hero -->
+    <section id="intro">
+      <div class="intro background-color">
+        <div class="text-secondary px-4 py-5 text-center">
+          <div class="py-5">
+            <img class="portrait" src="./assets/images/logo.jpg" />
+            <h1 class="display-5 fw-bold text-dark">
+              Hi!<br />
+              I am Samiul.
+            </h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="fs-5 mb-4">
+                I am a full stack web developer with 10+ years of experience and
+                well-versed from frontend to backend, database to devops.
+              </p>
+              <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
+                          <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+                        </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Education</h2>
-    <ul>
-      <li>
-        PhD in Computational Sciences and Informatics, George Mason University
-        (2020 - 2023)
-      </li>
-      <li>
-        MSc in Computer Science & Engineering, BRAC University (2015 - 2017)
-      </li>
-      <li>
-        BSc in Computer Science & Engineering, BRAC University (2010 - 2014)
-      </li>
-    </ul>
-    <hr />
+    <!-- Career Summary -->
+    <section id="summary">
+      <div class="summary">
+        <div
+          class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+        >
+          <div class="list-group">
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    10+ years of full stack development experience in all phases
+                    of Software Development Life Cycle (SDLC) including
+                    Requirement Analysis, Design, Development, Testing,
+                    Deployment, Operation, Debugging, Project Management
+                    Implementation and Maintenance of web based,
+                    commercial/enterprise business applications for multi-tiered
+                    distributed products and distributed applications using
+                    JAVA/J2EE technologies. Strong foundation in Java Technology
+                    (J2SE, J2EE) and in-depth understanding of Object-Oriented
+                    Concepts (OOP).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Extensively used Core Java, Servlets, JDBC, MVC, Struts,
+                    Junit, Test Data Driven Methodologies (TDD), Behavior Driven
+                    Development (BDD).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Working for FinTech companies (Banking, eTrading, etc) for
+                    the entirety of my career. Understanding of the Financial
+                    Information eXchange (FIX) protocol.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Expertise in UI Design and Development using HTML5, CSS3
+                    (SASS, LESS), Bootstrap, JavaScript, JSP, XML, JSON, jQuery
+                    bootstrap, Vue.JS, Node.js, AJAX that follows W3C Web
+                    standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Have good knowledge on different databases like PostgreSQL,
+                    MySQL, DB2, Oracle 12c/11g, Microsoft SQL Server, NoSQL DB
+                    (Raven DB, Mongo DB and Cassandra, Couch DB, Redis, Dynamo
+                    DB).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Proficient in RDBMS concepts like writing SQL queries,
+                    stored procedures, functions and triggers using PL/SQL in
+                    JDBC, ODBC and in WebLogic server.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Experienced in working with source control tools and
+                    repositories such as Git, GitHub, SVN, CVS, Bitbucket.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Knowledge and experience with Cloud based implementation,
+                    Continuous Integration (CI), Continuous Build and Continuous
+                    Deployment (CD) Practice, and tools such as Jenkins, Maven.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Closely worked with the client and UX designer to understand
+                    the requirement and developed according to the wireframes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Experience in all phases of SDLC like Requirement Analysis,
+                    Implementation and Maintenance, and extensive experience
+                    with Agile, SAFe, and SCRUM.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Expertise in TypeScript, leveraging its powerful features to
+                    enhance code quality, maintainability, and developer
+                    productivity.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Extensive knowledge in developing single - page applications
+                    (SPAs) with Angular and React.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Expertise in using Angular JS Directives, Controllers,
+                    Filters, Services, Templates, Events, and Injectors.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Experience in Client Scripting language and server-side
+                    scripting languages like HTML5, CSS3, JavaScript with ECMA5,
+                    ECMA6+ features, Angular1.x/2/4/5, React.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">
+                    Worked extensively with JAVA 8 features like Stream API,
+                    Time API, Functional Interfaces Multithreading, Transaction
+                    Management, Exception Handling, Collection API.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="list-group-item list-group-item-action d-flex gap-3 pt-3"
+            >
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <p class="mb text-justify">K.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Work Experience</h2>
-    <ul>
-      <li>
-        <h3>Java Developer, Programming Trainer - Wyzant</h3>
-        <p>January 2020 - Present</p>
-        <ul>
-          <li>Actively participated in the code of multiple Java backend projects</li>
-          <li>Worked on Spring Boot, Hibernate, developed RESTfull APIs, employed AOP, etc.</li>
-          <li>Experienced in pair programming</li>
-        </ul>
-      </li>
+    <section>TEST</section>
 
-      <li>
-        <h3>Java Developer, Programming Trainer - Varsity Tutors, a Nerdy Company</h3>
-        <p>January 2020 - Present</p>
-        <ul>
-          <li>Actively working with developers in their early careers or graduating students to tackle professional projects</li>
-          <li>Extensively used to core Java and designed, built and tested backends that are OOP-heavy</li>
-          <li>Good experience in database design, management and integrating to the system</li>
-        </ul>
-      </li>
+    <section>TEST</section>
 
-      <li>
-        <h3>Research Assistant - National Science Foundation (NSF)</h3>
-        <p>May 2022 - Present</p>
-        <ul>
-          <li>Working with the Center for Adaptive Systems of Brain-Body Interactions (CASBBI) at George Mason University, which brings together scientists, engineers, health care professionals, and community stakeholders to research and create translational innovations aimed at challenges related to disability.</li>
-          <li>CASBBI is led by Dr. Siddhartha Sikdar, Jim Thompson, and Lynn Gerber and funded through NSF.</li>
-        </ul>
-      </li>
+    <section>TEST</section>
 
-      <li>
-        <h3>Research Assistant - George Mason University</h3>
-        <p>August 2021 - May 2022</p>
-        <ul>
-          <li>Used to assist students in two undergraduate courses with their data acquisition, cleaning, and modeling needs.</li>
-          <li>Used to assist Dr Kavak in his research work and contributed to multiple projects.</li>
-          <li>Working as a Professional Assistant under the Summer Team Impact Projects of George Mason University. A group of two researchers (including me) led my professors from multiple disciplines, such as data science, geo-information science, epidemiology, etc., worked on human mobility and its impact while COVID-19 happened. I contributed to a published article as a first author.</li>
-          <li>Used to assist Dr Kavak in his research work and contributed to multiple projects.</li>
-        </ul>
-      </li>
+    <section>TEST</section>
 
-      <li>
-        <h3>Lecturer - BRAC University</h3>
-        <p>May 2014 - January 2020</p>
-        <ul>
-          <li>Spent almost six years at BRAC University, and during my entire career, I taught Data Structures and Programming Language (a course where I used to teach Java to freshers/newcomers). I have taken other courses such as Data Communications, Algorithms, etc.</li>
-          <li>Used to consult students to understand their needs and difficulties and provide one-to-one consultations. Judging their merit and the industry requirements, I used to design programming assignments to get the best out of them so they find a sync when they transit to the industry.</li>
-        </ul>
-      </li>
-    </ul>
-    <hr />
+    <section>TEST</section>
 
-    <h2>Skills</h2>
-    <ul>
-      <li><b>Programming Languages: </b><b><i>&#160 Experienced: </i></b> Java | JavaScript | Python </b><b><i>&#160 Familiar: </i></b> R | C | C++ | MATLAB</li>
-      <li><b>Frameworks:</b>&#160 Spring | Spring Boot | J2EE | Hibernate | Spring AOP | Angular | Jupyter</li>
-      <li><b>Web Development:</b>&#160 HTML | CSS | JavaScript | Angular</li>
-      <li><b>Database Management:</b>&#160 MySQL | PostgreSQL | MongoDB</li>
-      <li><b>Software Development:</b>&#160 Programming Paradigms | Git | GitHub | CLI | Agile Methodology</li>
-      <li><b>Libraries:</b>&#160 Tensorflow | PyTorch | Matplotplib | Numpy | Pandas | Scikit-learn</li>
-      <li><b>Languages:</b></b><b><i>&#160 Native: </i></b> Bengali </b><b><i>&#160 Fluent: </i></b> English</li>
-    </ul>
-    <hr />
+    <section>TEST</section>
 
-    <h2>Awards and Certification</h2>
-    <ul>
-        <li>2022-2023: NSF-sponsored CASBBI National Research Traineeship (NRT) fellowship.</li>
-        <li>2017: Scholar grant and best paper award for research article titled ’A smart grid prerequisite: survey on electricity
-        demand forecasting models and scope analysis of demand forecasting in Bangladesh’.</li>
-        <li>2017: Vice Chancellor’s Gold Medal in the 12th Convocation of BRAC University for being the top scorer of the MSc
-        Program.</li>
-        <li>2017: CPRsouth Young Scholar.</li>
-        <li>2010-2014: Seven and two times placed on VC and Dean’s list, respectively, during undergraduate.</li>
-    </ul>
+    <section>TEST</section>
 
-    <h2>Other</h2>
-    <ul>
-      <li><a href="./public/hobbies.html">My Hobbies</a></li>
-      <li><a href="./public/contact.html">Contact Me</a></li>
-    </ul>
+    <section>TEST</section>
 
-    <footer>&#169 Samiul Islam. All rights reserved.</footer>
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <section>TEST</section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

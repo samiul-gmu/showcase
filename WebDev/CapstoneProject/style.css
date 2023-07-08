@@ -1,0 +1,32 @@
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.background-color {
+  background-color: rgb(231, 255, 224);
+}
+
+.intro {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait {
+  height: 150px;
+  border-radius: 50%;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
